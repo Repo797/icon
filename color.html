@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Pick</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #000000;
+    }
+    .button {
+      display: block;
+      width: 120px;
+      height: 50px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s;
+    }
+    .button:hover {
+      transform: scale(1.1);
+    }
+    .tooltip {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 4px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .button:hover .tooltip {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function copyToClipboard(color) {
+      navigator.clipboard.writeText(color).then(() => {
+        //alert(`Copied: ${color}`);
+      }).catch(err => {
+        console.error('Could not copy text: ', err);
+      });
+    }
+  </script>
+
+  <button class="button" style="background-color: #254032;" onclick="copyToClipboard('#254032')">
+    Bottle Green
+  </button>
+  <button class="button" style="background-color: #b2a7c5;" onclick="copyToClipboard('#b2a7c5')">
+    Lavender
+  </button>
+  <button class="button" style="background-color: #1e2337;" onclick="copyToClipboard('#1e2337')">
+    Navy Blue
+  </button>
+  <button class="button" style="background-color: #ffffff;" onclick="copyToClipboard('#ffffff')">
+    White
+  </button>
+  <button class="button" style="background-color: #49252f;" onclick="copyToClipboard('#49252f')">
+    Maroon
+  </button>
+  <button class="button" style="background-color: #000000;" onclick="copyToClipboard('#000000')">
+    Black
+  </button>
+  <button class="button" style="background-color: #dea7b1;" onclick="copyToClipboard('#dea7b1')">
+    Baby Pink
+  </button>
+  <button class="button" style="background-color: #c8c9cf;" onclick="copyToClipboard('#c8c9cf')">
+    Grey Melange
+  </button>
+  <button class="button" style="background-color: #a7e7e8;" onclick="copyToClipboard('#a7e7e8')">
+    Mint
+  </button>
+  <button class="button" style="background-color: #1f37c3;" onclick="copyToClipboard('#1f37c3')">
+    Royal Blue
+  </button>
+
+  <button class="button" style="background-color: #5a5d4a;" onclick="copyToClipboard('#5a5d4a')">
+    Olive Green
+  </button>
+
+  <button class="button" style="background-color: #b6212d;" onclick="copyToClipboard('#b6212d')">
+    Red
+  </button>
+
+  <button class="button" style="background-color: #ecba44;" onclick="copyToClipboard('#ecba44')">
+    Mustard Yellow
+  </button>
+
+  <button class="button" style="background-color: #dba045;" onclick="copyToClipboard('#dba045')">
+    Golden Yellow
+  </button>
+
+  <button class="button" style="background-color: #b9634d;" onclick="copyToClipboard('#b9634d')">
+    Coral
+  </button>
+
+  <button class="button" style="background-color: #a9d5fe;" onclick="copyToClipboard('#a9d5fe')">
+    Baby Blue
+  </button>
+
+  <button class="button" style="background-color: #efc1ce;" onclick="copyToClipboard('#efc1ce')">
+    Light Baby Pink
+  </button>
+  
+  
+  <button class="button" style="background-color: #173148;" onclick="copyToClipboard('#173148')">
+    Petrol Blue
+  </button>
+  
+  
+  <button class="button" style="background-color: #352c59;" onclick="copyToClipboard('#352c59')">
+    Purple
+  </button>
+  
+
+</body>
+</html>
